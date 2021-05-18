@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login&Registor.css">
+    <link rel="icon" href="img/iconmonstr-customer-4.svg">
+    <title>Login Page</title>
+    <style>
+  </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-box">
+            <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()">Login</button>
+            <button type="button" class="toggle-btn" onclick="register()">Registor</button>
+        </div>
+        <form id= "login" class="input-group">
+            <input type="text"  class="input-field" placeholder="User ID/Email " required>
+            <input type="password" class="input-field" placeholder="Password" required>
+            <input type="checkbox" class="check-box" required><span>Remember Password</span>
+            <input class="submit-btn" type="submit" value="Login" onclick="return validateLoginForm()"><br>
+            <p>New user? click on Register</p>
+        </form>
+        <form id = "register" class="input-group">
+            <input type="text" class="input-field" id="userName" placeholder="Enter the User name" required>
+            <input type="text" class="input-field" id="empID" placeholder="Enter Employee ID" required>
+            <input type="text" class="input-field" id="Batch" placeholder="Enter the Batch_no" required>
+            <input type="email" class="input-field" id="email" placeholder="Enter the Email" required>
+            <input type="password" class="input-field" id="password" placeholder="Enter the Password" required>
+            <input type="password" class="input-field" id="confirmPassword" placeholder="Re-Enter the Password" required>
+            <h6 style="text-align: center; color: black" >Select the Gender</h6>
+            <input type="checkbox" class="check" id="Male" ><span>Male</span>
+            <input type="checkbox" class="check-box" id="Female" ><span>Female</span>
+           
+            <input class="submit" type="submit" value="Register" onclick="return validateRegisterForm()"> 
+            <input class="submit" type="reset" value="Reset">
+        </form> 
+        </div>
+    </div>
+    <script src="./login&Registor.js"></script>
+    <script src="./getFormData.js"></script>
+    <script src="./jsonData.js"></script>
+</body>
+</html>
